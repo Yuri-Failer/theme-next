@@ -1,0 +1,193 @@
+/*!
+  Theme name: Next Insurance
+  Author: Yuri Failer
+  Version: 1.0
+ */
+
+@import "./bootstrap.min.css";
+@import './colors.css';
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+
+}
+.mobile-banner {
+  text-align: right;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+
+  a {
+    background-color: $bright-sky-blue;
+    color: white;
+    border-radius: 1rem;
+  }
+
+  .fa {
+    padding: 4px;
+  }
+}
+
+.main {
+  background-image:
+          linear-gradient(to top, #0ba9d600 11rem, #0ba9d6 15rem, #093643 90%),
+          url(assets/images/banner-image.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+
+  > .container {
+    padding-top: 2.4rem;
+    padding-bottom: 10rem;
+  }
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  .title {
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 0.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+  }
+}
+
+.form-section {
+
+
+  h2 {
+    font-size: 1.05rem;
+    color: $bright-sky-blue;
+  }
+
+  .btn-submit {
+    background-color: $tangerine;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 2.5rem;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .business {
+    display: none;
+  }
+
+  .custom-select {
+    background: url(assets/images/arrow.png) no-repeat right white;
+    -webkit-appearance: none;
+    background-position-x: calc(100% - 15px);
+    padding-right: 50px;
+  }
+
+  .custom-checkbox {
+    font-size: 0.85rem;
+    line-height: 1.6rem;
+
+    .custom-control-input {
+      display: none;
+    }
+
+    custom-control-label {
+      color: $cloudy-blue;
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+      background: #fff url(assets/images/check.png) center  no-repeat;
+    }
+
+    .custom-control-label::before {
+      background-color: white;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .main {
+    background-image:
+            linear-gradient(to top, #0ba9d600 14rem, #0ba9d6 16rem, #093643 90%),
+            url(assets/images/banner-image.jpg);
+
+    > .container {
+      padding-bottom: 18rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .main {
+    background-image:
+            linear-gradient(to top, rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0) ),
+            linear-gradient(to left, rgba(19, 113, 139, 0) 44%, rgba(19, 113, 139, 0.97) 62%, $light-navy 60%),
+            url("assets/images/banner-image.jpg");
+    background-position: left, left, right;
+    background-size: auto, auto, contain;
+
+    > .container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      margin-left: 4rem;
+    }
+  }
+
+  .headline {
+    text-align: left;
+
+    .title {
+      font-size: 3.4rem;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2) {
+  .main {
+    background-image:
+      inherit,
+      url(assets/images/banner-image@2x.jpg);
+  }
+
+  .form-section .custom-select {
+    background-image: url(assets/images/arrow@2x.png);
+    background-size: 8px 5px;
+  }
+}
